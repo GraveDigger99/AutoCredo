@@ -1787,6 +1787,10 @@ body::after {
   }
 }
 
+.menu__body._overflow {
+  overflow: visible;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
