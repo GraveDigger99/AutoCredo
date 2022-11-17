@@ -5915,7 +5915,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -o-transition: top 0.3s ease 0s;
     transition: top 0.3s ease 0s;
     background-color: #fff;
-    z-index: 5;
+    z-index: 101;
   }
 
   .menu-open .menu__body {
