@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221031112332">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221117181402">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item menu__item_1 menu__item_menu">
+							<li class="menu__item menu__item_menu">
 								<div class="sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item">
@@ -49,9 +49,10 @@
 								</div>
 								<button type="button" class="menu__link-sub-menu">Наші послуги</button>
 							</li>
-							<li class="menu__item menu__item_2"><a href="#" class="menu__link">Про компанію</a></li>
-							<li class="menu__item menu__item_3"><a href="#" class="menu__link">Партнери</a></li>
-							<li class="menu__item menu__item_4"><a href="#" class="menu__link">Контакти</a></li>
+							<li class="menu__item "><a href="#" class="menu__link">Про компанію</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Партнери</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+
 						</ul>
 
 						<div class="menu__info">
@@ -100,28 +101,25 @@
 				<a data-da=".items,1110,first" href="#" class="header__button button button_height button_size">Заказать звонок</a>
 			</div>
 		</header>
+
+
 		<main class="page">
 			<section class="mainscreen-home">
 				<div class="mainscreen-home__container">
-					<h1 class="mainscreen-home__title title">Авто<span>подбор</span></h1>
-					<h3 class="mainscreen-home__headline headline headline_weight headline_italic">Поиск и проверка Б/У автомобилей в Украине</h3>
-					<span class="mainscreen-home__text">найдем лучший вариант!</span>
-					<a href="#" class="mainscreen-home__button button">Заказать</a>
+					<div class="mainscreen-home__body">
+						<h1 class="mainscreen-home__title title">Авто<span>подбор</span></h1>
+						<h3 class="mainscreen-home__headline headline headline_weight headline_italic">Поиск и проверка Б/У
+							автомобилей в
+							Украине </h3>
+						<span class="mainscreen-home__text">найдем лучший вариант!</span>
+						<a href="#" class="mainscreen-home__button button">Задать вопрос</a>
+					</div>
 					<div class="info-decor">
 						<picture><source srcset="img/mainpage/main-decor.webp" type="image/webp"><img class="info-decor__image" src="img/mainpage/main-decor.png" alt="image"></picture>
-						<!-- <div class="info-decor__round">
-							<div class="info-decor__round-content">
-								<span class="info-decor__text info-decor__text_first">За</span>
-								<span class="info-decor__text info-decor__text_second">129 параметров</span>
-							</div>
-						</div> -->
-						<!-- <div class="info-decor__mid">
-							7 дней
-						</div> -->
 					</div>
 				</div>
 				<div class="mainscreen-home__image">
-					<picture><source srcset="img/mainpage/main-bg.webp" type="image/webp"><img src="img/mainpage/main-bg.jpg" alt="image"></picture>
+					<picture><source srcset="img/mainpage/test-bg.webp" type="image/webp"><img src="img/mainpage/test-bg.png" alt=""></picture>
 				</div>
 			</section>
 			<section class="statistics">
@@ -138,7 +136,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="statistics__label label">Цена</div>
+						<h4 class="statistics__label label">Цена</h4>
 						<div class="statistics__text">Имеют завышенн ую цену. С нами покупка автомобиля обойдется Вам намного
 							дешевле.</div>
 					</div>
@@ -154,7 +152,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="statistics__label label">ДТП</div>
+						<h4 class="statistics__label label">ДТП</h4>
 						<div class="statistics__text">Побывали в крупных ДТП. Проверяем машину на предмет ремонта, участия в
 							ДТП, деформации, замены элементов или повторной
 							покраски и т.д.</div>
@@ -171,7 +169,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="statistics__label label">Документы</div>
+						<h4 class="statistics__label label">Документы</h4>
 						<div class="statistics__text">Проблем с регистрацией, залогами, кредитами. Делаем проверку VIN-номера,
 							сервисной истории, наличие и подлинность
 							документов.</div>
@@ -185,7 +183,7 @@
 						<div class="why__items">
 							<div class="why__item item-why item-why_first">
 								<h3 class="item-why__label label">В подбор автомобиля входит</h3>
-								<ul class="item-why__list">
+								<ul class="item-why__list item-why__list_first">
 									<li class="item-why__item">Поиск лучшего предложения</li>
 									<li class="item-why__item">Проверка на СТО</li>
 									<li class="item-why__item">Проверка на аресты и залог</li>
@@ -199,7 +197,7 @@
 							</div>
 							<div data-da=".why__inner,767,last" class="why__item item-why item-why_second">
 								<h3 class="item-why__label label">Даем три вида гарантии</h3>
-								<ul class="item-why__list">
+								<ul class="item-why__list item-why__list_second">
 									<li class="item-why__item">Гарантия юридической чистоты</li>
 									<li class="item-why__item">Гарантия технической исправности</li>
 									<li class="item-why__item">Гарантия денежной защиты</li>
@@ -233,11 +231,11 @@
 										<img class="name__icon" src="img/icons/user.svg" alt="icon:user">
 									</div>
 									<div class="phone">
-										<input autocomplete="off" type="number" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="input input_phone">
+										<input autocomplete="off" type="phone" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="input input_phone">
 										<img class="phone__icon" src="img/icons/form-phone.svg" alt="icon:phone">
 									</div>
 									<div class="button-form">
-										<button type="submit" class="button">Заказать</button>
+										<button type="submit" class="button">Задать вопрос</button>
 									</div>
 									<!--  -->
 								</form>
@@ -246,7 +244,7 @@
 					</div>
 				</div>
 				<div class="advice__image">
-					<picture><source srcset="img/mainpage/porche.webp" type="image/webp"><img src="img/mainpage/porche.png" alt="image"></picture>
+					<picture><source srcset="img/mainpage/porche.test.webp" type="image/webp"><img src="img/mainpage/porche.test.png" alt="image"></picture>
 				</div>
 			</section>
 			<section class="diagnostics">
@@ -451,7 +449,7 @@
 							</div>
 							<div class="packages__content content-packages">
 								<div class="content-packages__top content-packages__top_pack">
-									<h4 class="packages__label label">Автоподбор под ключ</h4>
+									<h4 class="packages__label label">Автоподбор под ключ </h4>
 									<span class="price">500$</span>
 								</div>
 								<div class="content-packages__bottom">
@@ -467,7 +465,7 @@
 										</ul>
 									</div>
 									<div class="content-packages__button">
-										<a href="#" class="button">Заказать</a>
+										<a href="#" class="content-packages__btn button">Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -496,7 +494,7 @@
 										</ul>
 									</div>
 									<div class="content-packages__button">
-										<a href="#" class="button">Заказать</a>
+										<a href="#" class="content-packages__btn button">Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -525,7 +523,7 @@
 										</ul>
 									</div>
 									<div class="content-packages__button">
-										<a href="#" class="button">Заказать</a>
+										<a href="#" class="content-packages__btn button">Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -534,7 +532,7 @@
 					<div class="individual">
 						<h4 class="individual__label label">Интересуют отдельные услуги?</h4>
 						<div class="individual__row">
-							<div class="individual__column">
+							<div data-da=".slide-individual-first,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-1.webp" type="image/webp"><img src="img/mainpage/individual-1.jpg" alt="image"></picture>
@@ -553,12 +551,12 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class="individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="individual__column">
+							<div data-da=".slide-individual-first,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-2.webp" type="image/webp"><img src="img/mainpage/individual-2.jpg" alt="image"></picture>
@@ -578,12 +576,12 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class="individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="individual__column">
+							<div data-da=".slide-individual-first,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-3.webp" type="image/webp"><img src="img/mainpage/individual-3.jpg" alt="image"></picture>
@@ -604,12 +602,12 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class="individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="individual__column">
+							<div data-da=".slide-individual-second,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-4.webp" type="image/webp"><img src="img/mainpage/individual-4.jpg" alt="image"></picture>
@@ -629,12 +627,12 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class="individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="individual__column">
+							<div data-da=".slide-individual-second,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-5.webp" type="image/webp"><img src="img/mainpage/individual-5.jpg" alt="image"></picture>
@@ -657,12 +655,12 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class=" individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="individual__column">
+							<div data-da=".slide-individual-second,767" class="individual__column">
 								<div class="individual__item">
 									<a href="#" class="individual__image">
 										<picture><source srcset="img/mainpage/individual-6.webp" type="image/webp"><img src="img/mainpage/individual-6.jpg" alt="image"></picture>
@@ -682,11 +680,24 @@
 											</ul>
 										</div>
 										<div class="individual__button">
-											<a href="#" class="button">Заказать</a>
+											<a href="#" class=" individual__btn button">Заказать</a>
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="individual__slider swiper">
+							<!-- Двигающееся часть слайдера -->
+							<div class="individual__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="individual__slide swiper-slide slide-individual slide-individual-first"></div>
+								<!--  -->
+								<!-- Слайд -->
+								<div class="individual__slide swiper-slide slide-individual slide-individual-second"></div>
+								<!--  -->
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
@@ -749,7 +760,7 @@
 							<img class="name__icon" src="img/icons/user.svg" alt="icon:user">
 						</div>
 						<div class="phone">
-							<input autocomplete="off" type="number" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="input input_phone">
+							<input autocomplete="off" type="phone" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="input input_phone">
 							<img class="phone__icon" src="img/icons/form-phone.svg" alt="icon:phone">
 						</div>
 						<div class="city">
@@ -837,20 +848,107 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="popup-type" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup-type__items">
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/01.webp" type="image/webp"><img src="img/popup-type/01.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Кроссовер</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/02.webp" type="image/webp"><img src="img/popup-type/02.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Внедорожник</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/03.webp" type="image/webp"><img src="img/popup-type/03.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Пикап</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/04.webp" type="image/webp"><img src="img/popup-type/04.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Хэтчбек</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/05.webp" type="image/webp"><img src="img/popup-type/05.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Седан</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/06.webp" type="image/webp"><img src="img/popup-type/06.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Минивен</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/07.webp" type="image/webp"><img src="img/popup-type/07.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Родстер</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/08.webp" type="image/webp"><img src="img/popup-type/08.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Кабриолет</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/09.webp" type="image/webp"><img src="img/popup-type/09.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Купе</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<picture><source srcset="img/popup-type/10.webp" type="image/webp"><img src="img/popup-type/10.png" alt="image"></picture>
+						</div>
+						<span class="popup-type__description">Лимузин</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
+	<!--  -->
+	<div id="popup-city" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_city">
+				<div class="popup-city__header">Выберете город</div>
+				<div class="popup-city__items">
+					<a href="#" class="popup-city__item">
+						<span class="popup-city__name">Киев</span>
+						<img src="img/kiev.svg" alt="image">
+					</a>
+					<a href="#" class="popup-city__item">
+						<span class="popup-city__name">Харьков</span>
+						<img src="img/xhk.svg" alt="image">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+	<div id="popup-range" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_range">
+				<div class="popup-range__header">Выберете цену</div>
+				<span class="popup-range__count">4 000$</span>
+				<div class="slider"></div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
 
-	<script src="js/app.min.js?_v=20221031112332"></script>
+	<script src="js/app.min.js?_v=20221117181402"></script>
 </body>
 
 </html>
