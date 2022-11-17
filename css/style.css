@@ -1448,8 +1448,9 @@ body::after {
   margin-top: 65px !important;
 }
 
-.no-webp .rate{
-  background: url("../img/rate/rate-bg.png") center/cover no-repeat; }
+.rate {
+  background: url("../img/rate/rate-bg.png") center/cover no-repeat;
+}
 
 @supports (padding-top: clamp( 3.4375rem , 1.5614994664rem  +  8.0042689434vw , 8.125rem )) {
   .rate__container {
@@ -1812,7 +1813,7 @@ body::after {
 
 .menu__item {
   position: relative;
-  z-index: -1;
+  z-index: 50;
 }
 
 .menu__item_menu {
@@ -3864,8 +3865,9 @@ body::after {
   display: inline-flex;
 }
 
-.no-webp .mainscreen-trade{
-  background: url("../img/trade/main-background.png") center/cover no-repeat; }
+.mainscreen-trade {
+  background: url("../img/trade/main-background.png") center/cover no-repeat;
+}
 
 @supports (padding-top: clamp( 7.5rem , 6.7367906067rem  +  3.8160469667vw , 9.9375rem )) {
   .mainscreen-trade {
@@ -4328,10 +4330,8 @@ body::after {
   }
 }
 
-.no-webp .mainscreen-realization{
-  background: url("../img/realization/main-bg.png") center/cover no-repeat; }
-
 .mainscreen-realization {
+  background: url("../img/realization/main-bg.png") center/cover no-repeat;
   padding-bottom: 64px;
 }
 
@@ -6228,10 +6228,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     left: 0;
   }
 
-  .no-webp .item-why_second::after{
-    background: url("../img/mainpage/right-s.png") 0 0 no-repeat; }
-
   .item-why_second::after {
+    background: url("../img/mainpage/right-s.png") 0 0 no-repeat;
     width: 30px;
     height: 30px;
     left: 0;
@@ -6484,13 +6482,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: 30px;
   }
 
-  .no-webp .why__image span{
-    background: url("../img/mainpage/right-s.png") 0 0 no-repeat; }
-
   .why__image span {
     position: absolute;
     right: 35px;
     top: 14px;
+    background: url("../img/mainpage/right-s.png") 0 0 no-repeat;
     width: 30px;
     height: 30px;
   }
@@ -7202,20 +7198,4 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     color: rgba(217, 46, 16, 0.7058823529);
     text-decoration: underline;
   }
-}
-
-.webp .rate{ background: url(../img/rate/rate-bg.webp) center/cover no-repeat; }
-
-.webp .mainscreen-trade{ background: url(../img/trade/main-background.webp) center/cover no-repeat; }
-
-.webp .mainscreen-realization{ background: url(../img/realization/main-bg.webp) center/cover no-repeat; }
-
-@media (max-width: 61.99875em){
-
-  .webp .item-why_second::after{ background: url(../img/mainpage/right-s.webp) 0 0 no-repeat; }
-}
-
-@media (max-width: 47.99875em){
-
-  .webp .why__image span{ background: url(../img/mainpage/right-s.webp) 0 0 no-repeat; }
 }
