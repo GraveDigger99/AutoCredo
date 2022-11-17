@@ -8101,20 +8101,15 @@ PERFORMANCE OF THIS SOFTWARE.
         const subMenuIcon = document.querySelector(".menu__item_menu");
         const subMenu = document.querySelector(".sub-menu");
         document.querySelector(".form-advice__icon-phone");
-        document.querySelector(".form-advice__icon-name");
-        document.querySelector(".form-advice__input_phone");
-        document.querySelector(".form-advice__input_name");
         const MenuBody = document.querySelector(".menu__body");
-        const subBtn = document.querySelector(".menu__link-sub-menu");
-        subBtn.addEventListener("click", (() => {
-            MenuBody.style.overflow = "visible";
-        }));
+        document.querySelector(".menu__link-sub-menu");
         document.addEventListener("click", (function(e) {
             let targetElement = e.target;
             if (targetElement.closest(".menu__item_menu")) {
                 subMenu.classList.toggle("_active");
                 subMenuIcon.classList.toggle("_active");
-            } else subMenu.classList.remove("_active");
+            }
+            if (targetElement.closest(".menu__link-sub-menu")) MenuBody.classList.toggle("_overflow");
         }));
         isWebp();
         menuInit();
