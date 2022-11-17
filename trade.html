@@ -6,8 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221031112332">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221117183352">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -24,7 +23,7 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item menu__item_1 menu__item_menu">
+							<li class="menu__item menu__item_menu">
 								<div class="sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item">
@@ -49,9 +48,10 @@
 								</div>
 								<button type="button" class="menu__link-sub-menu">Наші послуги</button>
 							</li>
-							<li class="menu__item menu__item_2"><a href="#" class="menu__link">Про компанію</a></li>
-							<li class="menu__item menu__item_3"><a href="#" class="menu__link">Партнери</a></li>
-							<li class="menu__item menu__item_4"><a href="#" class="menu__link">Контакти</a></li>
+							<li class="menu__item "><a href="#" class="menu__link">Про компанію</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Партнери</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+
 						</ul>
 
 						<div class="menu__info">
@@ -100,6 +100,8 @@
 				<a data-da=".items,1110,first" href="#" class="header__button button button_height button_size">Заказать звонок</a>
 			</div>
 		</header>
+
+
 		<main class="page">
 			<section class="mainscreen-trade">
 				<div class="mainscreen-trade__container">
@@ -128,7 +130,7 @@
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__image">
-											<picture><source srcset="img/trade/main-slider.webp" type="image/webp"><img src="img/trade/main-slider.png" alt="image"></picture>
+											<img src="img/trade/main-slider.png" alt="image">
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__footer">
@@ -162,7 +164,7 @@
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__image">
-											<picture><source srcset="img/trade/main-slider.webp" type="image/webp"><img src="img/trade/main-slider.png" alt="image"></picture>
+											<img src="img/trade/main-slider.png" alt="image">
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__footer">
@@ -196,7 +198,7 @@
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__image">
-											<picture><source srcset="img/trade/main-slider.webp" type="image/webp"><img src="img/trade/main-slider.png" alt="image"></picture>
+											<img src="img/trade/main-slider.png" alt="image">
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__footer">
@@ -230,7 +232,7 @@
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__image">
-											<picture><source srcset="img/trade/main-slider.webp" type="image/webp"><img src="img/trade/main-slider.png" alt="image"></picture>
+											<img src="img/trade/main-slider.png" alt="image">
 										</div>
 										<!--  -->
 										<div class="slide-trade-mainscreen__footer">
@@ -270,13 +272,13 @@
 			<div class="search-block">
 				<div class="search-block__container">
 					<form action="#" class="search-form form-search">
-						<div class="form-search__type">
+						<div data-popup="#popup-type" class="form-search__type">
 							<select name="form[]" class="form">
 								<option value="1" selected>Тип кузова</option>
 								<option value="2">Тип кузова</option>
 							</select>
 						</div>
-						<div class="form-search__city">
+						<div data-popup="#popup-city" class="form-search__city">
 							<select name="form[]" class="form">
 								<option value="1" selected>Город</option>
 								<option value="2">Город</option>
@@ -298,7 +300,7 @@
 					<div class="advantage__items">
 						<div class="advantage__item item-advantage">
 							<div class="item-advantage__image">
-								<picture><source srcset="img/redemption/01.webp" type="image/webp"><img src="img/redemption/01.png" alt="image"></picture>
+								<img src="img/redemption/01.png" alt="image">
 							</div>
 							<h4 class="item-advantage__label label">Гарантии и безопасность</h4>
 							<p class="item-advantage__text">Обмен автомобиля проводится у нас в центре, поэтому гарантирует
@@ -307,7 +309,7 @@
 						<!--  -->
 						<div class="advantage__item item-advantage">
 							<div class="item-advantage__image">
-								<picture><source srcset="img/redemption/02.webp" type="image/webp"><img src="img/redemption/02.png" alt="image"></picture>
+								<img src="img/redemption/02.png" alt="image">
 							</div>
 							<h4 class="item-advantage__label label">Оценка</h4>
 							<p class="item-advantage__text">Доплата разницы от рыночной стоимости</p>
@@ -315,7 +317,7 @@
 						<!--  -->
 						<div class="advantage__item item-advantage">
 							<div class="item-advantage__image">
-								<picture><source srcset="img/redemption/03.webp" type="image/webp"><img src="img/redemption/03.png" alt="image"></picture>
+								<img src="img/redemption/03.png" alt="image">
 							</div>
 							<h4 class="item-advantage__label label">Комфорт и экономия времени</h4>
 							<p class="item-advantage__text">Весь документооборот и сопровождение сделки по обмену ведется
@@ -324,7 +326,7 @@
 						<!--  -->
 						<div class="advantage__item item-advantage">
 							<div class="item-advantage__image">
-								<picture><source srcset="img/redemption/04.webp" type="image/webp"><img src="img/redemption/04.png" alt="image"></picture>
+								<img src="img/redemption/04.png" alt="image">
 							</div>
 							<h4 class="item-advantage__label label">Удобство</h4>
 							<p class="item-advantage__text">Приезжаете в центр на своей машине, уезжаете на новой</p>
@@ -340,7 +342,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -377,7 +379,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -414,7 +416,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -451,7 +453,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -488,7 +490,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -525,7 +527,7 @@
 						<div class="offer__column">
 							<div class="offer__item item-offer">
 								<div class="item-offer__image">
-									<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+									<img src="img/offer/01.jpg" alt="image">
 								</div>
 								<div class="item-offer__content">
 									<span class="item-offer__name">BMW iX M60</span>
@@ -567,7 +569,7 @@
 									<div class="offer__column">
 										<div class="offer__item item-offer">
 											<div class="item-offer__image">
-												<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+												<img src="img/offer/01.jpg" alt="image">
 											</div>
 											<div class="item-offer__content">
 												<span class="item-offer__name">BMW iX M60</span>
@@ -607,7 +609,7 @@
 								<div class="offer__column">
 									<div class="offer__item item-offer">
 										<div class="item-offer__image">
-											<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+											<img src="img/offer/01.jpg" alt="image">
 										</div>
 										<div class="item-offer__content">
 											<span class="item-offer__name">BMW iX M60</span>
@@ -646,7 +648,7 @@
 								<div class="offer__column">
 									<div class="offer__item item-offer">
 										<div class="item-offer__image">
-											<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+											<img src="img/offer/01.jpg" alt="image">
 										</div>
 										<div class="item-offer__content">
 											<span class="item-offer__name">BMW iX M60</span>
@@ -686,7 +688,7 @@
 									<div class="offer__column">
 										<div class="offer__item item-offer">
 											<div class="item-offer__image">
-												<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+												<img src="img/offer/01.jpg" alt="image">
 											</div>
 											<div class="item-offer__content">
 												<span class="item-offer__name">BMW iX M60</span>
@@ -726,7 +728,7 @@
 								<div class="offer__column">
 									<div class="offer__item item-offer">
 										<div class="item-offer__image">
-											<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+											<img src="img/offer/01.jpg" alt="image">
 										</div>
 										<div class="item-offer__content">
 											<span class="item-offer__name">BMW iX M60</span>
@@ -765,7 +767,7 @@
 								<div class="offer__column">
 									<div class="offer__item item-offer">
 										<div class="item-offer__image">
-											<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.jpg" alt="image"></picture>
+											<img src="img/offer/01.jpg" alt="image">
 										</div>
 										<div class="item-offer__content">
 											<span class="item-offer__name">BMW iX M60</span>
@@ -811,21 +813,21 @@
 					<h2 class="how__subtitle subtitle">Как это работает?</h2>
 					<div class="how__items">
 						<div class="how__item">
-							<picture><source srcset="img/trade/1.webp" type="image/webp"><img src="img/trade/1.png" alt="image"></picture>
+							<img src="img/trade/1.png" alt="image">
 							<div class="how__content">
 								<div class="how__step">1</div>
 								<span class="how__header">Выберите новую машину из списка</span>
 							</div>
 						</div>
 						<div class="how__item">
-							<picture><source srcset="img/trade/2.webp" type="image/webp"><img src="img/trade/2.png" alt="image"></picture>
+							<img src="img/trade/2.png" alt="image">
 							<div class="how__content">
 								<div class="how__step">2</div>
 								<span class="how__header">Дилер оценивает подержанную машину</span>
 							</div>
 						</div>
 						<div class="how__item">
-							<picture><source srcset="img/trade/3.webp" type="image/webp"><img src="img/trade/3.png" alt="image"></picture>
+							<img src="img/trade/3.png" alt="image">
 							<div class="how__content">
 								<div class="how__step">3</div>
 								<span class="how__header">Доплачиваете и получаете новую машину</span>
@@ -1128,7 +1130,7 @@
 								<div class="slide-reviews__inner">
 									<div class="slide-reviews__header">
 										<div class="slide-reviews__avatar">
-											<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="image"></picture>
+											<img src="img/reviews/01.png" alt="image">
 										</div>
 										<div class="slide-reviews__name">Natalia Volodumurivna</div>
 									</div>
@@ -1161,7 +1163,7 @@
 								<div data-da=".slide-reviews_first,768,last" class="slide-reviews__inner">
 									<div class="slide-reviews__header">
 										<div class="slide-reviews__avatar">
-											<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="image"></picture>
+											<img src="img/reviews/01.png" alt="image">
 										</div>
 										<div class="slide-reviews__name">Natalia Volodumurivna</div>
 									</div>
@@ -1193,7 +1195,7 @@
 							<div class="reviews__slide swiper-slide slide-reviews">
 								<div class="slide-reviews__header">
 									<div class="slide-reviews__avatar">
-										<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="image"></picture>
+										<img src="img/reviews/01.png" alt="image">
 									</div>
 									<div class="slide-reviews__name">Natalia Volodumurivna</div>
 								</div>
@@ -1222,7 +1224,7 @@
 							<div class="reviews__slide swiper-slide slide-reviews">
 								<div class="slide-reviews__header">
 									<div class="slide-reviews__avatar">
-										<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="image"></picture>
+										<img src="img/reviews/01.png" alt="image">
 									</div>
 									<div class="slide-reviews__name">Natalia Volodumurivna</div>
 								</div>
@@ -1326,7 +1328,7 @@
 					</form>
 				</div>
 				<div class="callback-form__bg">
-					<picture><source srcset="img/callback/Forma.webp" type="image/webp"><img src="img/callback/Forma.jpg" alt="image"></picture>
+					<img src="img/callback/Forma.jpg" alt="image">
 				</div>
 			</section>
 			<!-- <section class="often-asked">
@@ -1411,20 +1413,107 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="popup-type" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup-type__items">
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/01.png" alt="image">
+						</div>
+						<span class="popup-type__description">Кроссовер</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/02.png" alt="image">
+						</div>
+						<span class="popup-type__description">Внедорожник</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/03.png" alt="image">
+						</div>
+						<span class="popup-type__description">Пикап</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/04.png" alt="image">
+						</div>
+						<span class="popup-type__description">Хэтчбек</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/05.png" alt="image">
+						</div>
+						<span class="popup-type__description">Седан</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/06.png" alt="image">
+						</div>
+						<span class="popup-type__description">Минивен</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/07.png" alt="image">
+						</div>
+						<span class="popup-type__description">Родстер</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/08.png" alt="image">
+						</div>
+						<span class="popup-type__description">Кабриолет</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/09.png" alt="image">
+						</div>
+						<span class="popup-type__description">Купе</span>
+					</a>
+					<a href="#" class="popup-type__item">
+						<div class="popup-type__image">
+							<img src="img/popup-type/10.png" alt="image">
+						</div>
+						<span class="popup-type__description">Лимузин</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
+	<!--  -->
+	<div id="popup-city" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_city">
+				<div class="popup-city__header">Выберете город</div>
+				<div class="popup-city__items">
+					<a href="#" class="popup-city__item">
+						<span class="popup-city__name">Киев</span>
+						<img src="img/kiev.svg" alt="image">
+					</a>
+					<a href="#" class="popup-city__item">
+						<span class="popup-city__name">Харьков</span>
+						<img src="img/xhk.svg" alt="image">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+	<div id="popup-range" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_range">
+				<div class="popup-range__header">Выберете цену</div>
+				<span class="popup-range__count">4 000$</span>
+				<div class="slider"></div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
 
-	<script src="js/app.min.js?_v=20221031112332"></script>
+	<script src="js/app.min.js?_v=20221117183352"></script>
 </body>
 
 </html>
