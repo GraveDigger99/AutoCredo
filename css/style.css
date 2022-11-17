@@ -7203,3 +7203,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     text-decoration: underline;
   }
 }
+
+@media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 1200px) {
+  .sub-menu {
+    top: -20%;
+  }
+}
