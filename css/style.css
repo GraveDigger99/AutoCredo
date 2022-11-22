@@ -6503,10 +6503,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 20px;
   }
 
-  .swiper-pagination {
-    margin-top: 30px !important;
-  }
-
   .form-info {
     padding-left: 20px;
   }
