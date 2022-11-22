@@ -6162,6 +6162,7 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
+                autoHeight: true,
                 effect: "fade",
                 autoplay: {
                     delay: 3e3,
@@ -6200,8 +6201,7 @@
                 observer: true,
                 observeParents: true,
                 slidesPerView: 3,
-                spaceBetween: 10,
-                autoHeight: true,
+                spaceBetween: 20,
                 speed: 800,
                 pagination: {
                     el: ".swiper-pagination",
@@ -6214,24 +6214,23 @@
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: 10,
-                        autoHeight: true
+                        spaceBetween: 20
                     },
                     550: {
-                        slidesPerView: 2,
-                        spaceBetween: 10
+                        slidesPerView: 1,
+                        spaceBetween: 20
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 10
+                        spaceBetween: 20
                     },
                     992: {
-                        slidesPerView: 3,
-                        spaceBetween: 10
+                        slidesPerView: 2,
+                        spaceBetween: 20
                     },
                     1268: {
-                        slidesPerView: 4,
-                        spaceBetween: 30
+                        slidesPerView: 2,
+                        spaceBetween: 20
                     }
                 },
                 on: {}
@@ -6254,8 +6253,7 @@
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: 0,
-                        autoHeight: true
+                        spaceBetween: 0
                     },
                     768: {
                         slidesPerView: 2,
