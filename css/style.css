@@ -188,12 +188,19 @@ textarea.input {
 .select__title {
   color: inherit;
   text-align: left;
-  background-color: #fff;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 20px;
   cursor: pointer;
   width: 100%;
   height: 60px;
+}
+
+.type-active .select_type-select .select__title {
+  border: 1px solid rgba(217, 46, 16, 0.5);
+}
+
+.city-active .select_city-select .select__title {
+  border: 1px solid rgba(217, 46, 16, 0.5);
 }
 
 .select_form-language .select__title {
@@ -215,7 +222,7 @@ textarea.input {
   text-transform: capitalize;
   font-size: 18px;
   line-height: 160%;
-  color: #24262d;
+  color: #24262d !important;
 }
 
 .select_form-language .select__value {
@@ -224,6 +231,14 @@ textarea.input {
   padding-left: 0 !important;
   padding-right: 0 !important;
   gap: 0.4375rem;
+}
+
+.type-active .select_type-select .select__value {
+  color: #D92E10 !important;
+}
+
+.city-active .select_city-select .select__value {
+  color: #D92E10 !important;
 }
 
 .select__value > * {
@@ -309,6 +324,21 @@ textarea.input {
   padding: 0 !important;
   background-color: transparent !important;
   overflow: visible;
+}
+
+.select_type-select .select__options {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select_city-select .select__options {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select_price-select .select__options {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .select__scroll {
@@ -454,8 +484,16 @@ body::after {
 }
 
 .popup__content_city {
-  max-width: 543px;
-  padding: 37px 96px;
+  max-width: 400px;
+  padding: 37px 60px;
+}
+
+.popup__content_range {
+  padding-top: 48px;
+  padding-bottom: 68px;
+  padding-left: 78px;
+  padding-right: 78px;
+  max-width: 500px;
 }
 
 .popup-type__items {
@@ -468,6 +506,18 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@supports (row-gap: clamp( 1.25rem , 0.6629158513rem  +  2.9354207436vw , 3.125rem )) {
+  .popup-type__items {
+    row-gap: clamp( 1.25rem , 0.6629158513rem  +  2.9354207436vw , 3.125rem );
+  }
+}
+
+@supports not (row-gap: clamp( 1.25rem , 0.6629158513rem  +  2.9354207436vw , 3.125rem )) {
+  .popup-type__items {
+    row-gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 63.875);
+  }
 }
 
 @supports ((-moz-column-gap: clamp( 1.25rem , -7.4784482759rem  +  12.9310344828vw , 3.125rem )) or (column-gap: clamp( 1.25rem , -7.4784482759rem  +  12.9310344828vw , 3.125rem ))) {
@@ -503,20 +553,25 @@ body::after {
   text-align: center;
   row-gap: 30px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 120px;
-          flex: 0 1 120px;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
 }
 
 .popup-type__image {
   width: 120px;
   height: 120px;
+  overflow: hidden;
   border-radius: 50%;
 }
 
 .popup-type__image img {
+  max-width: 100%;
+  height: 100%;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popup-type__description {
@@ -525,6 +580,8 @@ body::after {
   line-height: 100%;
   text-align: center;
   color: #000000;
+  max-width: 150px;
+  word-wrap: anywhere;
 }
 
 .popup-city__header {
@@ -552,6 +609,11 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .popup-city__item {
@@ -571,6 +633,8 @@ body::after {
 
 .popup-city__name {
   font-weight: 600;
+  max-width: 150px;
+  word-wrap: anywhere;
   font-size: 16px;
   line-height: 100%;
   display: -webkit-box;
@@ -584,6 +648,54 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.popup-city__image {
+  width: 80px;
+  height: 90px;
+}
+
+.popup-city__image img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.popup-range__header {
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.popup-range__header:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.popup-range__count {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #D92E10;
+}
+
+.popup-range__currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-range__currency:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #D92E10;
 }
 
 .spollers {
@@ -4608,6 +4720,388 @@ body::after {
   display: flex;
 }
 
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.noUi-target {
+  position: relative;
+}
+
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  -webkit-transform-style: flat;
+          transform-style: flat;
+}
+
+/* Offset direction
+ */
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+
+.noUi-vertical .noUi-origin {
+  top: -100%;
+  width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+
+.noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+
+.noUi-horizontal {
+  height: 4px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 13px;
+  height: 13px;
+  right: -12px;
+  top: -5px;
+  border-radius: 50%;
+  background-color: #D92E10;
+}
+
+.noUi-vertical {
+  width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  right: -6px;
+  bottom: -17px;
+}
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+  left: -17px;
+  right: auto;
+}
+
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+
+.noUi-target {
+  background-color: #D9D9D9;
+  border-radius: 4px;
+}
+
+.noUi-connects {
+  border-radius: 3px;
+}
+
+.noUi-connect {
+  background: #D92E10 !important;
+}
+
+/* Handles and cursors;
+ */
+
+.noUi-draggable {
+  cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+
+.noUi-handle {
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  border: 1px solid #757575;
+}
+
+/* Handle stripes;
+ */
+
+.noUi-handle:after {
+  left: 17px;
+}
+
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+
+.noUi-vertical .noUi-handle:after {
+  top: 17px;
+}
+
+/* Disabled state;
+ */
+
+[disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+ *
+ */
+
+.noUi-pips,
+.noUi-pips * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+
+/* Values;
+ *
+ */
+
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 11px;
+  color: #24262D;
+}
+
+.noUi-value::after {
+  content: "$";
+}
+
+.noUi-value:last-child::after {
+  content: "$>" !important;
+}
+
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/* Markings;
+ *
+ */
+
+.noUi-marker {
+  position: absolute;
+  background: #CCC;
+}
+
+.noUi-marker-sub {
+  background: #AAA;
+}
+
+.noUi-marker-large {
+  background: #AAA;
+}
+
+/* Horizontal layout;
+ *
+ */
+
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  top: 100%;
+  left: 6px;
+  width: 92%;
+}
+
+.noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+      transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+      transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+
+/* Vertical layout;
+ *
+ */
+
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+  padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+      transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120%;
+}
+
+.noUi-vertical .noUi-tooltip {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+
+.noUi-horizontal .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(50%, 0);
+  -ms-transform: translate(50%, 0);
+      transform: translate(50%, 0);
+  left: auto;
+  bottom: 10px;
+}
+
+.noUi-vertical .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(0, -18px);
+  -ms-transform: translate(0, -18px);
+      transform: translate(0, -18px);
+  top: auto;
+  right: 28px;
+}
+
+.noUi-handle-upper {
+  right: 0 !important;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -6268,6 +6762,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 61.99875em) {
+  .popup__content {
+    padding: 30px;
+  }
+
+  .popup-type__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 23%;
+            flex: 0 1 23%;
+  }
+
   .info-decor {
     margin-top: none !important;
   }
@@ -6977,6 +7481,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 29.99875em) {
+  .popup__content_city {
+    padding: 20px;
+  }
+
+  .popup__content_range {
+    max-width: none;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+  }
+
   .headline_italic {
     font-style: normal;
   }
@@ -7210,6 +7726,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .individual__top {
     padding-left: 35px;
     padding-right: 35px;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .popup-type__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

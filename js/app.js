@@ -2620,19 +2620,38 @@
         modules_flsModules.select = new SelectConstructor({});
         var nouislider = __webpack_require__(211);
         function rangeInit() {
-            const priceSlider = document.querySelector("#range");
-            if (priceSlider) {
-                priceSlider.getAttribute("data-from");
-                priceSlider.getAttribute("data-to");
-                nouislider.create(priceSlider, {
-                    start: 0,
-                    connect: [ true, false ],
-                    range: {
-                        min: [ 0 ],
-                        max: [ 2e5 ]
+            var slider = document.getElementById("slider");
+            nouislider.create(slider, {
+                start: [ 0, 4e3 ],
+                connect: true,
+                format: {
+                    from: function(value) {
+                        return parseInt(value);
+                    },
+                    to: function(value) {
+                        return parseInt(value);
                     }
-                });
-            }
+                },
+                range: {
+                    min: 0,
+                    "10%": 3e3,
+                    "25%": 4e3,
+                    "40%": 7e3,
+                    "55%": 9e3,
+                    "70%": 11e3,
+                    "85%": 2e4,
+                    max: 25e3
+                },
+                pips: {
+                    mode: "steps",
+                    stepped: true,
+                    density: 7
+                }
+            });
+            var rangeSliderValueElement = document.querySelector(".popup-range__count");
+            slider.noUiSlider.on("update", (function(values, handle) {
+                rangeSliderValueElement.innerHTML = values[handle];
+            }));
         }
         rangeInit();
         function ssr_window_esm_isObject(obj) {
@@ -8096,11 +8115,104 @@ PERFORMANCE OF THIS SOFTWARE.
         };
         const da = new DynamicAdapt("max");
         da.init();
+        !function(e) {
+            "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? module.exports = e() : window.wNumb = e();
+        }((function() {
+            "use strict";
+            var o = [ "decimals", "thousand", "mark", "prefix", "suffix", "encoder", "decoder", "negativeBefore", "negative", "edit", "undo" ];
+            function w(e) {
+                return e.split("").reverse().join("");
+            }
+            function h(e, t) {
+                return e.substring(0, t.length) === t;
+            }
+            function f(e, t, n) {
+                if ((e[t] || e[n]) && e[t] === e[n]) throw new Error(t);
+            }
+            function x(e) {
+                return "number" == typeof e && isFinite(e);
+            }
+            function n(e, t, n, r, i, o, f, u, s, c, a, p) {
+                var d, l, h, g = p, v = "", m = "";
+                return o && (p = o(p)), !!x(p) && (!1 !== e && 0 === parseFloat(p.toFixed(e)) && (p = 0), 
+                p < 0 && (d = !0, p = Math.abs(p)), !1 !== e && (p = function(e, t) {
+                    return e = e.toString().split("e"), (+((e = (e = Math.round(+(e[0] + "e" + (e[1] ? +e[1] + t : t)))).toString().split("e"))[0] + "e" + (e[1] ? e[1] - t : -t))).toFixed(t);
+                }(p, e)), -1 !== (p = p.toString()).indexOf(".") ? (h = (l = p.split("."))[0], n && (v = n + l[1])) : h = p, 
+                t && (h = w((h = w(h).match(/.{1,3}/g)).join(w(t)))), d && u && (m += u), r && (m += r), 
+                d && s && (m += s), m += h, m += v, i && (m += i), c && (m = c(m, g)), m);
+            }
+            function r(e, t, n, r, i, o, f, u, s, c, a, p) {
+                var d, l = "";
+                return a && (p = a(p)), !(!p || "string" != typeof p) && (u && h(p, u) && (p = p.replace(u, ""), 
+                d = !0), r && h(p, r) && (p = p.replace(r, "")), s && h(p, s) && (p = p.replace(s, ""), 
+                d = !0), i && function(e, t) {
+                    return e.slice(-1 * t.length) === t;
+                }(p, i) && (p = p.slice(0, -1 * i.length)), t && (p = p.split(t).join("")), n && (p = p.replace(n, ".")), 
+                d && (l += "-"), "" !== (l = (l += p).replace(/[^0-9\.\-.]/g, "")) && (l = Number(l), 
+                f && (l = f(l)), !!x(l) && l));
+            }
+            function i(e, t, n) {
+                var r, i = [];
+                for (r = 0; r < o.length; r += 1) i.push(e[o[r]]);
+                return i.push(n), t.apply("", i);
+            }
+            return function e(t) {
+                if (!(this instanceof e)) return new e(t);
+                "object" == typeof t && (t = function(e) {
+                    var t, n, r, i = {};
+                    for (void 0 === e.suffix && (e.suffix = e.postfix), t = 0; t < o.length; t += 1) if (void 0 === (r = e[n = o[t]])) "negative" !== n || i.negativeBefore ? "mark" === n && "." !== i.thousand ? i[n] = "." : i[n] = !1 : i[n] = "-"; else if ("decimals" === n) {
+                        if (!(0 <= r && r < 8)) throw new Error(n);
+                        i[n] = r;
+                    } else if ("encoder" === n || "decoder" === n || "edit" === n || "undo" === n) {
+                        if ("function" != typeof r) throw new Error(n);
+                        i[n] = r;
+                    } else {
+                        if ("string" != typeof r) throw new Error(n);
+                        i[n] = r;
+                    }
+                    return f(i, "mark", "thousand"), f(i, "prefix", "negative"), f(i, "prefix", "negativeBefore"), 
+                    i;
+                }(t), this.to = function(e) {
+                    return i(t, n, e);
+                }, this.from = function(e) {
+                    return i(t, r, e);
+                });
+            };
+        }));
         const subMenuIcon = document.querySelector(".menu__item_menu");
         const subMenu = document.querySelector(".sub-menu");
         document.querySelector(".form-advice__icon-phone");
         const MenuBody = document.querySelector(".menu__body");
         document.querySelector(".menu__link-sub-menu");
+        document.querySelector(".select_type-select");
+        document.querySelector(".popup_show");
+        document.querySelector(".popup-show");
+        const popupContent = document.querySelector(".popup__content");
+        console.log(popupContent);
+        const popupItemType = document.querySelectorAll(".popup-type__item");
+        const popupItemCity = document.querySelectorAll(".popup-city__item");
+        document.querySelectorAll(".popup-type__description");
+        document.querySelectorAll("popup-city__name");
+        const typeOption = document.querySelector(".type");
+        const testOp = document.querySelector(".select__options .type");
+        const cityOption = document.querySelector(".city");
+        const cityOp = document.querySelector(".select__options .city");
+        popupItemType.forEach((function(item, i, arr) {
+            item.addEventListener("click", (function(e) {
+                const popupItemTypeChildren = item.lastElementChild;
+                let content = popupItemTypeChildren.innerHTML;
+                typeOption.innerHTML = content;
+                testOp.innerHTML = content;
+            }));
+        }));
+        popupItemCity.forEach((function(item, i, arr) {
+            item.addEventListener("click", (function(e) {
+                const popupItemCityChildren = item.firstElementChild;
+                let contentCity = popupItemCityChildren.innerHTML;
+                cityOption.innerHTML = contentCity;
+                cityOp.innerHTML = contentCity;
+            }));
+        }));
         document.addEventListener("click", (function(e) {
             let targetElement = e.target;
             if (targetElement.closest(".menu__item_menu")) {
@@ -8108,7 +8220,18 @@ PERFORMANCE OF THIS SOFTWARE.
                 subMenuIcon.classList.toggle("_active");
             }
             if (targetElement.closest(".menu__link-sub-menu")) MenuBody.classList.toggle("_overflow");
+            if (targetElement.closest(".select_type-select")) document.documentElement.classList.add("type-active");
+            if (targetElement.closest(".select_city-select")) document.documentElement.classList.add("city-active");
         }));
+        var slider = document.getElementById("slider");
+        noUiSlider.create(slider, {
+            start: [ 20, 80 ],
+            connect: true,
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
         isWebp();
         menuInit();
         spollers();
